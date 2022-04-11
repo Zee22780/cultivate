@@ -18,3 +18,9 @@ def create_flashcard():
     print('Flashcard Created')
     return redirect(url_for('core.index'))
   return render_template('create_flashcard.html', form=form)
+
+
+@flashcards.route('/<int:flashcard_id>')
+def flashcard(flashcard_id):
+  flashcard = Flashcard.query.get_or_404(flashcard_id)
+  return render_template('flashcard.html', collection=flashcard.collection, front=flashcard.front, back=flashcard.back)
