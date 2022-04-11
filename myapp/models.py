@@ -18,7 +18,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
-    collections = db.relationship('Collection', backref='author', lazy=True)
+    flashcards = db.relationship('Flashcard', backref='author', lazy=True)
 
     def __init__(self, email, username, password):
         self.email = email
@@ -32,21 +32,23 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"Username {self.username}"
 
-class Collection(db.Model):
-    __tablename__ = 'collections'
+class Flashcard(db.Model):
+    __tablename__ = 'flashcards'
 
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(140), nullable=False)
-    flashcard = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    collection = db.Column(db.String(140), nullable=False)
+    front = db.Column(db.String)
+    back = db.Column(db.String)
 
-    def __init__(self, title, flashcard, user_id):
-        self.title = title
-        self.flashcard = flashcard
+    def __init__(self, collection, front, back, user_id):
+        self.collection = collection
+        self.front = front
+        self.back = back
         self.user_id = user_id
 
     def __repr__(self):
-        return f"Collection ID: {self.id} --- Title: {self.title} --- Flashcard: {self.flashcard}"
+        return f"Flashcard ID: {self.id} --- Collection: {self.collection}"
 
 
 
