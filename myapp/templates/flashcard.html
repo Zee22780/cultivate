@@ -9,10 +9,13 @@
   <p>{{ back }}</p>
 </div>
 
-  {% if author == current_user %}
+  {% if flashcard.author == current_user %}
   <div>
     <a href="{{ url_for('flashcards.update', flashcard_id=flashcard.id) }}">Update</a>
     <br>
+    <form action="{{ url_for('flashcards.delete_flashcard', flashcard_id=flashcard.id) }}" method="POST">
+      <input type="submit" value="Delete">
+    </form>
   {% endif %}
   </div>
 

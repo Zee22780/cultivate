@@ -56,3 +56,5 @@ app.register_blueprint(users)
 #Linking and registering flashcards views Blueprint
 from myapp.flashcards.views import flashcards
 app.register_blueprint(flashcards)
+
+

@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+
+
     <div class="heading">
         <h1>Ready to make some flashcards?</h1>
     </div>
-   
+    
+    <div class="container">
+        {% for flashcard in flashcards %}
+        <!-- <p>{{flashcard.front}}</p> -->
+            <div class="card">
+                <a href="{{url_for('flashcards.flashcard', flashcard_id=flashcard.id)}}">
+                    {{flashcard.front}}</a>
+                    
+            </div>
+        {% endfor %}
+    </div>
+
+
 {% endblock %}
