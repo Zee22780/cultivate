@@ -50,3 +50,19 @@ def update(flashcard_id):
     form.back.data = flashcard.back
 
   return render_template('create_flashcard.html', title='Updating', form=form)
+
+
+@flashcards.route('/<int:flashcard_id>/delete', methods=['GET', 'POST'])
+@login_required
+def delete_flashcard(flashcard_id):
+
+  flashcard = Flashcard.query.get_or_404(flashcard_id)
+  if flashcard.author != current_user:
+    abort(403)
+
+  db.session.delete(flashcard)
+  db.session.commit()
+  flash('Flashcard Deleted')
+  return redirect(url_for('core.index'))
+
+
