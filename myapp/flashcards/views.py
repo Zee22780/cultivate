@@ -24,3 +24,29 @@ def create_flashcard():
 def flashcard(flashcard_id):
   flashcard = Flashcard.query.get_or_404(flashcard_id)
   return render_template('flashcard.html', collection=flashcard.collection, front=flashcard.front, back=flashcard.back)
+
+
+@flashcards.route('/<int:flashcard_id>/update', methods=['GET', 'POST'])
+@login_required
+def update(flashcard_id):
+  flashcard = Flashcard.query.get_or_404(flashcard_id)
+
+  if flashcard.author != current_user:
+    abort(403)
+
+  form = FlashcardForm()
+
+  if form.validate_on_submit():
+    flashcard.collection = form.collection.data
+    flashcard.front = form.front.data
+    flashcard.back = form.back.data
+    db.session.commit()
+    flash('Flashcard Updated')
+    return redirect(url_for('flashcards.flashcard', flashcard_id=flashcard.id))
+
+  elif request.method == 'GET':
+    form.collection.data = flashcard.collection
+    form.front.data = flashcard.front
+    form.back.data = flashcard.back
+
+  return render_template('create_flashcard.html', title='Updating', form=form)
