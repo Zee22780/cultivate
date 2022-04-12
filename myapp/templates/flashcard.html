@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="flashcard_front">
-  <p>{{ front }}</p>
-</div>
 
-<div class="flashcard_back">
-  <p>{{ back }}</p>
+<div class="flip-card">
+  <div class="flipcard-inner">
+    <div class="flashcard_front">
+      <p>{{ flashcard.front }}</p>
+        </div>
+  <div class="flashcard_back">
+    <p>{{ flashcard.back }}</p>
+        </div>
+  </div>
 </div>
 
   {% if flashcard.author == current_user %}

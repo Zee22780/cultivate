@@ -34,3 +34,26 @@ li a:hover {
   justify-content: center;
   color: blue;
 }
+
+.flashcard_link {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Card styling */
+/* Index */
+.index_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.card {
+  border: 2pt solid black;
+  border-radius: 3px;
+  justify-content: center;
+  width: 10%;
+  padding: 2px;
+  margin: 5px;
+}
+

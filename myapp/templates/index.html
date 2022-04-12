@@ -10,10 +10,10 @@
         <h1>All Flashcards</h1>
     </div>
     
-    <div class="container">
+    <div class="index_container">
         {% for flashcard in flashcards %}
             <div class="card">
-                <a href="{{url_for('flashcards.flashcard', flashcard_id=flashcard.id)}}">
+                <a class="flashcard_link" href="{{url_for('flashcards.flashcard', flashcard_id=flashcard.id)}}">
                     {{flashcard.front}}</a>
                     
             </div>
