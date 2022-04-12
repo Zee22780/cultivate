@@ -16,6 +16,9 @@
     <form action="{{ url_for('flashcards.delete_flashcard', flashcard_id=flashcard.id) }}" method="POST">
       <input type="submit" value="Delete">
     </form>
+    <form action="{{ url_for('flashcards.next_flashcard', flashcard_id=flashcard.id) }}" method="GET">
+      <input type="submit" value="Next">
+    </form>
   {% endif %}
   </div>
 
