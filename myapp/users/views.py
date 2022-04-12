@@ -75,3 +75,5 @@ def user_flashcards(username):
     user = User.query.filter_by(username=username).first_or_404()
     flashcards = Flashcard.query.filter_by(author=user)
     return render_template('user_flashcards.html', flashcards=flashcards, user=user)
+
+
