@@ -14,14 +14,17 @@
 </div>
 
   {% if flashcard.author == current_user %}
-  <div class="flashcard-buttons">
-    <a href="{{ url_for('flashcards.update', flashcard_id=flashcard.id) }}">Update</a>
-    <br>
+  <div class="flashcard-btn-container">
+
+    <form action="{{ url_for('flashcards.update', flashcard_id=flashcard.id) }}" method="POST">
+      <input class="btn" type="submit" value="Update">
+    </form>
+
     <form action="{{ url_for('flashcards.delete_flashcard', flashcard_id=flashcard.id) }}" method="POST">
-      <input type="submit" value="Delete">
+      <input class="btn" type="submit" value="Delete">
     </form>
     <form action="{{ url_for('flashcards.next_flashcard', flashcard_id=flashcard.id) }}" method="GET">
-      <input type="submit" value="Next">
+      <input class="btn" type="submit" value="Next">
     </form>
   {% endif %}
   </div>
