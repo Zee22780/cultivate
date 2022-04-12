@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Lato', sans-serif;
+}
 .nav {
   display: flex;
   flex-direction: row;
