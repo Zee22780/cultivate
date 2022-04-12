@@ -23,7 +23,11 @@
     <form action="{{ url_for('flashcards.delete_flashcard', flashcard_id=flashcard.id) }}" method="POST">
       <input class="btn" type="submit" value="Delete">
     </form>
-    <form action="{{ url_for('flashcards.next_flashcard', flashcard_id=flashcard.id) }}" method="GET">
+    <form action="{{ url_for('flashcards.flashcard', flashcard_id=flashcard.id-1) }}" method="GET">
+      <input class="btn" type="submit" value="Previous">
+    </form>
+
+    <form action="{{ url_for('flashcards.flashcard', flashcard_id=flashcard.id+1) }}" method="GET">
       <input class="btn" type="submit" value="Next">
     </form>
   {% endif %}

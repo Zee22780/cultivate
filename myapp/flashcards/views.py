@@ -25,11 +25,6 @@ def flashcard(flashcard_id):
   flashcard = Flashcard.query.get_or_404(flashcard_id)
   return render_template('flashcard.html', collection=flashcard.collection, front=flashcard.front, back=flashcard.back, flashcard=flashcard)
 
-@flashcards.route('/<int:flashcard_id>+1')
-def next_flashcard(flashcard_id):
-  flashcard = Flashcard.query.get_or_404(flashcard_id)
-  return render_template('flashcard.html', collection=flashcard.collection, front=flashcard.front, back=flashcard.back, flashcard=flashcard)
-
 @flashcards.route('/<int:flashcard_id>/update', methods=['GET', 'POST'])
 @login_required
 def update(flashcard_id):
