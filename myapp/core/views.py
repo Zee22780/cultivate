@@ -17,3 +17,8 @@ def index():
 @core.route('/info')
 def info():
     return render_template('info.html')
+
+# For collections
+# @core.route('/collections')
+# def collections():
+#     return render_template('collection.html')

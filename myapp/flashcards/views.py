@@ -64,4 +64,9 @@ def delete_flashcard(flashcard_id):
   flash('Flashcard Deleted')
   return redirect(url_for('core.index'))
 
+# Show Collections
 
+# @flashcards.route('/<collections>')
+# def collection():
+#   collection = Flashcard.query.get_or_404(collection)
+#   return render_template('collection.html', collection=flashcard.collection)

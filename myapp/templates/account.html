@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
    
-<div class="jumbotron">
+<div class="">
     <div align="center">
-        <h1>Welcome to the page for {{current_user.username}}</h1>
+        <h1>Welcome to your account details {{current_user.username}}!</h1>
     </div>
 </div>
 
-<div class="container">
+<div class="account-container">
     <form method="POST" action="" enctype="multipart/form-data">
         <div class="form-group">
             {{form.hidden_tag()}}

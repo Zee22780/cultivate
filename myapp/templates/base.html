@@ -22,10 +22,13 @@
         </li>
 
         {% if current_user.is_authenticated %}
+        <!-- <li class="nav-link">
+            <a href="{{url_for('flashcards.collection')}}">Collections</a>
+        </li> -->
+
         <li class="nav-link">
             <a href="{{url_for('flashcards.create_flashcard')}}">Make A Flashcard</a>
         </li>
-
 
         <li class="nav-link">
             <a href="{{url_for('users.logout')}}">Log Out</a>
