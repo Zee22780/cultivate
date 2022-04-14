@@ -43,6 +43,7 @@ li a:hover {
   display: flex;
   justify-content: center;
   color: black;
+  margin-bottom: 20px;
 }
 
 .flashcard_link {
@@ -54,6 +55,7 @@ li a:hover {
 .quote {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 20px;
   font-style: italic;
 }
@@ -158,4 +160,36 @@ li a:hover {
   font-size: 20px;
   line-height: 25pt;
   margin-left: 30px;
+}
+
+/* Forms */
+.form {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  width: 25px;
+  margin: auto;
+  padding: 100px;
+  box-shadow: 5px 5px;
+}
+
+label {
+  font-size: 20px;
+}
+
+input {
+  border: 2px solid rgb(237, 230, 230);
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+input#submit {
+  background-color: black;
+  border-radius: 4px;
+  border-style: none;
+  color: white;
+  font-size: 15px;
+  width: 110px;
+  height: 25px;
+  margin-top: 20px;
 }
