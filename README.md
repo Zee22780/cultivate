@@ -35,4 +35,7 @@ Cultivate users can:
 ---
 ## Ice Box
 
-- [ ]
+- [ ] Allow users to upload images to flashcards
+- [ ] Allow users to store flashcards they have mastered somewhere so that they can focus their study on cards that haven't yet been mastered
+- [ ] Develop more sophisticated logic for previous and next buttons 
+- [ ] Allow users to view and navigate Collections of flashcards 
