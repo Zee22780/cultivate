@@ -128,3 +128,10 @@ li a:hover {
 .btn:hover {
   background-color: grey;
 }
+
+/* Instructions Page */
+.instructions {
+  font-size: 20px;
+  line-height: 25pt;
+  margin-left: 30px;
+}
