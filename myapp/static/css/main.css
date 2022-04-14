@@ -128,7 +128,7 @@ li a:hover {
   height: 100%;
   backface-visibility: hidden;
   background-color: #9A1D2E;
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
 .flashcard-btn-container {
@@ -192,4 +192,11 @@ input#submit {
   width: 110px;
   height: 25px;
   margin-top: 20px;
+}
+
+/* Error Pages */
+.error-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
