@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 100px;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -68,11 +77,20 @@ li a:hover {
 
   /*Flashcard show page (flashcard.html)*/
 .flip-card {
+  display: flex;
+  justify-content: center;
   position: relative;
   width: 250px;
   height:250px;
-  margin: 100px 550px 50px 550px;
-  background-color: black;
+  margin: auto;
+  background-color: white;
+  box-shadow: 10px 10px;
+  transition: box-shadow 300ms;
+}
+
+.flip-card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px;
 }
 
 .flipcard-inner {
@@ -95,6 +113,7 @@ li a:hover {
 
 .flashcard_front {
   position: absolute;
+  margin: auto;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -113,6 +132,7 @@ li a:hover {
 .flashcard-btn-container {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .btn {
@@ -123,6 +143,10 @@ li a:hover {
   width: 75px;
   height: 25px;
   margin: 2px;
+}
+
+.card-text {
+  margin-top: 110px;
 }
 
 .btn:hover {

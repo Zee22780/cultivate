@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container"> 
+<div class="create_container"> 
   <form class="form-group" method="POST">
     {{form.hidden_tag()}}
 
@@ -20,7 +20,7 @@
       {{form.back()}}
     </div>
 
-    <div class="">
+    <div class="create_btn">
       {{form.submit()}}
     </div>
   </form>
