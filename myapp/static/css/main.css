@@ -92,7 +92,7 @@ li a:hover {
 
 .flip-card:hover {
   transform: scale(1.1);
-  box-shadow: 5px 5px;
+  box-shadow: none;
 }
 
 .flipcard-inner {
@@ -105,6 +105,7 @@ li a:hover {
   transition: all 0.5s ease;
   background: #9A1D2E;
   color: white;
+  font-weight: bold; 
   font-size: 25px;
   
 }
@@ -162,6 +163,10 @@ li a:hover {
   margin-left: 30px;
 }
 
+#subheading {
+  font-size: 20px;
+}
+
 /* Forms */
 .form {
   display: flex;
@@ -192,6 +197,10 @@ input#submit {
   width: 110px;
   height: 25px;
   margin-top: 20px;
+}
+
+input#submit:hover {
+  background-color: grey;
 }
 
 /* Error Pages */
