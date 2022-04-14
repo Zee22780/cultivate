@@ -1,3 +1,7 @@
+<p align="center">
+<img width="100" src="myapp/static/images/Cultivate_Favicon2.png")
+</p>
+
 # Cultivate
 
 Anyone passionate about learning is no stranger to flashcards. Whether you love or hate flashcards, there's no denying their usefulness for learning. 
