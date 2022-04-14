@@ -14,7 +14,7 @@ def index():
     flashcards = Flashcard.query
     return render_template('index.html', flashcards=flashcards, QUOTES=QUOTES)
 
-@core.route('/info')
-def info():
-    return render_template('info.html')
+@core.route('/instructions')
+def instructions():
+    return render_template('instructions.html')
 

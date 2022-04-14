@@ -15,10 +15,10 @@
 <body>
     <ul class="nav">
         <li class="nav-link">
-            <a href="{{url_for('core.index')}}">All Flashcards</a>
+            <a href="{{url_for('core.instructions')}}">Instructions</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('core.info')}}">About</a>
+            <a href="{{url_for('core.index')}}">All Flashcards</a>
         </li>
 
         {% if current_user.is_authenticated %}
