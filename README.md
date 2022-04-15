@@ -1,5 +1,5 @@
 <p align="center">
-<img width="100" src="myapp/static/images/Cultivate_Favicon2.png")
+<img width="100" src="myapp/static/images/Cultivate_img.png")
 </p>
 
 # Cultivate
